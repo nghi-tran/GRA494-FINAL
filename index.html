@@ -5,19 +5,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial scale=1">
-        
+
         <title>Website</title>
-        
+
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style_final.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     </head>
-    
+
     <body>
-       
-    <!--Navigation component-->
+
+    <!--Navigation component
         <div class="navContainer">
             <div class="logoContainer">
                 <img src="img/logo-02.svg" class="logo" alt="A wordmark logo that says website.">
@@ -26,42 +29,54 @@
                 <li class="navItem"><a href="#">Websites</a></li>
                 <li class="navItem"><a href="#">Dot Coms</a></li>
                 <li class="navItem"><a href="#">Pages</a></li>
-                <li class="navItem"><button>Internet</button></li><!--This shouldn't have an animation on it-->
+                <li class="navItem"><button>Internet</button></li>
             </ul>
         </div>
+  Navigation component-->
+
+    <!--Switched to hamburger menu-->
+
+        <div class="navContainer" id="mynavContainer">
+
+          <div class="logoContainer">
+              <img src="img/logo-02.svg" class="logo" alt="A wordmark logo that says website.">
+          </div>
+
+          <div class="navHamburger">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#internet"><button>Internet</button></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+        </div>
+
     <!--Navigation component-->
+
+
 
     <!--Image with offset--><!--This is depdent on using flex and setting the text above the image on the z-index-->
         <div class="textOffset">
             <h1>The number one website to be a website, talk about websites and look like a website.</h1>
-            <img src="img/Website.png" alt="A simple illustration of a web page."><!--This has an absolute positioning-->
+            <img src="img/Website.png" class="rotate" alt="A simple illustration of a web page."><!--This has an absolute positioning-->
         </div>
     <!--Image with offset-->
-        
-        
-    <!--Bababooie
 
-        <button onclick="myFunction()">Click Me</button>
 
-        <div id="myDIV">Bababooie</div>
-        
-        <script>
-            function myFunction() {
-              var x = document.getElementById("myDIV");
-              if (x.style.display === "none") {
-                x.style.display = "block";
-              } else {
-                x.style.display = "none";
-              }
-            }
-        </script>
-    -->
-       
+
+
     <!--Banner Image-->
         <div class="image-banner__wrapper">
-            <img src="img/placeholder-2.png" alt="A bitmapped image of a tree in the desert.">
-        
-            <div class="centerBanner__wrapper">    
+
+          <div class="image-banner__random"></div>
+            <div id="random-images" alt="A series of random images" src="imgs/" ></div>
+
+            <!-- <img src="img/placeholder-2.png" alt="A bitmapped image of a tree in the desert."> -->
+
+            <div class="centerBanner__wrapper">
                 <div class="centerBanner">
                     <h1>What is a website?</h1>
                     <p>A website (also written as web site) is a collection of web pages and related content that is identified by a common domain name and published on at least one web server. Notable examples are wikipedia.org, google.com, and amazon.com.
@@ -71,13 +86,13 @@
                     Websites are typically dedicated to a particular topic or purpose, such as news, education, commerce, entertainment, or social networking. Hyperlinking between web pages guides the navigation of the site, which often starts with a home page.
 
                     Users can access websites on a range of devices, including desktops, laptops, tablets, and smartphones. The app used on these devices is called a web browser.</p>
-                    <button>Lorem Ipsum</button>
+                    <a class="link-contact-form" href="#contact-form"><button>Lorem Ipsum</button></a>
                 </div>
             </div>
-        
+
         </div>
     <!--Banner Image-->
-        
+
     <!--Two Column Layout-->
         <div class="twoColumn twoColumn--top">
             <div class="leftColumn">
@@ -85,7 +100,7 @@
                 <p>Being a website is easy! At an atomic level, your person should be constructed of Hypertext Markup language and Cascading Style Sheets. If you're feeling fancy, you could also be made of some Javascript. More advanced people can become websites that use PHP if they need dynamic content. </p>
             </div>
             <div class="rightColumn">
-                <img src="img/placeholder-2.png"> 
+                <img src="img/placeholder-2.png">
             </div>
         </div>
     <!--Two Column Layout-->
@@ -132,22 +147,244 @@
                         </div>
 
                 </div>
-                
+
         </div>
     <!--Card Ogranism-->
-       
-        <div class="twoColumn">
-            <div class="leftColumn">
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/G5kzUpWAusI' frameborder='0' allowfullscreen></iframe></div>
-            </div>
-            <div class="rightColumn">
-                <h2>Don't care about websites?</h2>
-                <p>You must have a miserable personality. Since you're so unenjoyable to be around, we suggest watching the Sonic the Hedgehog 2 trailer, you adult-child. Once you're done with that, try watching it again and see if you learn your lesson. It's not fun to talk to you.</p>
-            </div>
+
+    <!-- Bulleted list with icons -->
+        <div class="icon-section__wrapper">
+          <ul class="icon-section">
+
+            <li class="icon-wrapper">
+              <img src="img/cursor3.png" class="cursor">
+              <div class="icon-description">
+                <h3>Default</h3>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+
+            <li class="icon-wrapper">
+              <img src="img/cursor4.png" class="cursor">
+              <div class="icon-description">
+                <h3>Pointer</h3>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+
+            <li class="icon-wrapper">
+              <img src="img/cursor1.png" class="cursor">
+              <div class="icon-description">
+                <h3>Crosshair</h3>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+
+            <li class="icon-wrapper">
+              <img src="img/cursor2.png"  class="cursor">
+              <div class="icon-description">
+                <h3>Text</h3>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+
+            <li class="icon-wrapper">
+              <img src="img/cursor5.png"  class="cursor">
+              <div class="icon-description">
+                <h3>Loading</h3>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+
+            <li class="icon-wrapper">
+              <img src="img/cursor6.png" class="cursor">
+              <div class="icon-description">
+                <h3>Move</h3>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+
+          </ul>
         </div>
-        
+    <!-- Bulleted list with icons -->
+
+
     <!--Card Organism-->
-        
+
+
+
+
+
+    <div class="video-section">
+      <div class="video-thumb-wrapper">
+        <div class="video-thumb1">
+          <img src="https://qfi.staging.qfi.mindgrb.io/wp-content/themes/qfi/dist/images/landing/play-button.svg" alt="play video" class="play">
+        </div>
+      </div>
+
+      <div class="video-overlay1">
+        <div class="close1">
+          <img src="https://qfi.staging.qfi.mindgrb.io/wp-content/themes/qfi/dist/images/landing/video-close.svg" alt="close video">
+        </div>
+          <div class="contain-wrapper">
+            <iframe class="video-section__video" width="80%" height="900" src="https://www.youtube.com/embed/G5kzUpWAusI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture: " allowfullscreen alt="Sonic the Hedgehog
+            2 trailer"></iframe>
+          </div>
+      </div>
+
+
+      <div class="video-section__content">
+        <h2>Don't care about websites?</h2>
+        <p>You must have a miserable personality.
+          Since you're so unenjoyable to be around,
+          we suggest watching the Sonic the Hedgehog
+          2 trailer, you adult-child. Once you're
+          done with that, try watching it again and
+          see if you learn your lesson. It's not fun
+          to talk to you.</p>
+      </div>
+    </div>
+
+    <div class="video-section">
+      <div class="video-thumb-wrapper">
+        <div class="video-thumb2">
+          <img src="https://qfi.staging.qfi.mindgrb.io/wp-content/themes/qfi/dist/images/landing/play-button.svg" alt="play video" class="play">
+        </div>
+      </div>
+
+      <div class="video-overlay2">
+        <div class="close2">
+          <img src="https://qfi.staging.qfi.mindgrb.io/wp-content/themes/qfi/dist/images/landing/video-close.svg" alt="close video">
+        </div>
+          <div class="contain-wrapper">
+            <iframe class="video-section__video" width="80%" height="900" src="https://www.youtube.com/embed/G5kzUpWAusI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture: " allowfullscreen alt="Sonic the Hedgehog
+            2 trailer"></iframe>
+          </div>
+      </div>
+
+
+      <div class="video-section__content">
+        <h2>Don't care about websites?</h2>
+        <p>You must have a miserable personality.
+          Since you're so unenjoyable to be around,
+          we suggest watching the Sonic the Hedgehog
+          2 trailer, you adult-child. Once you're
+          done with that, try watching it again and
+          see if you learn your lesson. It's not fun
+          to talk to you.</p>
+      </div>
+    </div>
+
+    <div class="video-section">
+      <div class="video-thumb-wrapper">
+        <div class="video-thumb3">
+          <img src="https://qfi.staging.qfi.mindgrb.io/wp-content/themes/qfi/dist/images/landing/play-button.svg" alt="play video" class="play">
+        </div>
+      </div>
+
+      <div class="video-overlay3">
+        <div class="close3">
+          <img src="https://qfi.staging.qfi.mindgrb.io/wp-content/themes/qfi/dist/images/landing/video-close.svg" alt="close video">
+        </div>
+          <div class="contain-wrapper">
+            <iframe class="video-section__video" width="80%" height="900" src="https://www.youtube.com/embed/G5kzUpWAusI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture: " allowfullscreen alt="Sonic the Hedgehog
+            2 trailer"></iframe>
+          </div>
+      </div>
+
+
+      <div class="video-section__content">
+        <h2>Don't care about websites?</h2>
+        <p>You must have a miserable personality.
+          Since you're so unenjoyable to be around,
+          we suggest watching the Sonic the Hedgehog
+          2 trailer, you adult-child. Once you're
+          done with that, try watching it again and
+          see if you learn your lesson. It's not fun
+          to talk to you.</p>
+      </div>
+    </div>
+
+
+
+
+    <!--Contact Form-->
+        <div class="contact-form__wrapper">
+          <div class="leftColumn">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </div>
+
+          <div class="rightColumn">
+            <h2>Contact Form</h2>
+
+            <div class="contact-form__container" id="contact-form">
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Browser</label>
+                <select id="country" name="country">
+                  <option value="australia">Chrome</option>
+                  <option value="canada">Safari</option>
+                  <option value="usa">Firefox</option>
+                </select>
+
+                <button onclick="myFunction()">Submit</button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+    <!--Contact Form-->
+
+
+
+
+
+
+
     <!--Footer-->
         <div class="footer">
             <div class="footer__container">
@@ -162,6 +399,18 @@
             </div>
         </div>
     <!--Footer-->
-    
+    <script src="video.js"></script>
+    <script src="hamburger.js"></script>
+    <script src="random.js"></script>
+    <script>
+    function myFunction() {
+      confirm("Confirmation");
+    }
+    </script>
+
+
+
+
+
     </body>
     </html>
